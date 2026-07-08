@@ -64,3 +64,19 @@
   --font-mono: "DM Mono", monospace;
   --font-display: "Fraunces", serif;
 }
+
+@keyframes navOpen {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-nav-open {
+  animation: navOpen 260ms ease-out both;
+}
