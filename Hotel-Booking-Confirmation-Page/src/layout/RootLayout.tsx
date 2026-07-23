@@ -3,9 +3,9 @@ import Nav from "../components/Nav";
 
 export default function RootLayout() {
   return (
-    <div className="h-screen w-screen bg-sun-50">
+    <div className="min-h-screen w-screen bg-sun-50">
       <Nav />
-      <main>
+      <main className="relative z-0">
         <Outlet />
       </main>
     </div>

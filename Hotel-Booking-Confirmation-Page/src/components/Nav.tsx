@@ -27,7 +27,7 @@ const Nav = () => {
     const [activeItem, setActiveItem] = useState<MenuItemId>("stay");
 
     return(
-        <nav className={`p-4 flex flex-col ${open ? "h-screen" : ""}`}>
+        <nav className={`w-full bg-sun-50 p-4 flex flex-col ${open ? "fixed inset-0 z-50 h-screen" : "relative"}`}>
             <section className='pb-4 flex justify-between border-b border-neutral-300'>
                 <section>
                     <img src={logo} alt="" /> 
