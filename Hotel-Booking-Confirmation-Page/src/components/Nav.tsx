@@ -9,7 +9,7 @@ import breakfast from '../assets/icon-breakfast-outline.svg'
 import mail from '../assets/icon-mail.svg'
 
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MenuButton from './MenuButton';
 
 type MenuItemId = "stay" | "rate" | "details" | "breakfast" | "mail";
@@ -25,33 +25,52 @@ const menuItems: Array<{ id: MenuItemId; label: string; icon: string }> = [
 const Nav = () => {
     const [open, setOpen] = useState(false);
     const [activeItem, setActiveItem] = useState<MenuItemId>("stay");
+    const [isDesktop, setIsDesktop] = useState(() => {
+        if (typeof window === 'undefined') return false;
+        return window.innerWidth >= 1024;
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 1024);
+
+            if (window.innerWidth >= 1024) {
+                setOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const showMenuContent = isDesktop || open;
 
     return(
-        <nav className={`w-full bg-sun-50 p-4 flex flex-col ${open ? "fixed inset-0 z-50 h-screen" : "relative"}`}>
+        <nav className={`w-full bg-sun-50 p-4 flex flex-col lg:w-80 lg:border-r lg:border-neutral-300 lg:sticky lg:top-0 lg:h-screen ${isDesktop ? 'relative' : open ? 'fixed inset-0 z-50 h-screen' : 'relative'}`}>
             <section className='pb-4 flex justify-between border-b border-neutral-300'>
                 <section>
                     <img src={logo} alt="" /> 
                 </section>
-                <section>
+                <section className='lg:hidden'>
                     <button onClick={() => setOpen(!open)} className='border border-neutral-300 rounded-md p-1 hover:cursor-pointer'>
                         <img src={open ? close : menu} alt="" /> 
                     </button>
                 </section>
             </section>
-            {open && (
-                <section className='flex-1 flex flex-col justify-between animate-nav-open'>
+            {showMenuContent && (
+                <section className='flex-1 flex flex-col justify-between lg:justify-between animate-nav-open lg:pt-4'>
                     <section className="w-full pt-4 flex flex-col gap-2">
                         {menuItems.map((item) => (
                             <MenuButton
-                            key={item.id}
-                            label={item.label}
-                            icon={item.icon}
-                            isActive={activeItem === item.id}
-                            onClick={() => setActiveItem(item.id)}
+                                key={item.id}
+                                label={item.label}
+                                icon={item.icon}
+                                isActive={activeItem === item.id}
+                                onClick={() => setActiveItem(item.id)}
                             />
                         ))}
                     </section>
-                    <section>
+                    <section className='mt-6'>
                         <section className='w-full py-2 px-4 bg-sun-200 rounded-2xl relative overflow-hidden'>
                             <img className='absolute -right-2 -top-7' src={weather} alt="" />
                             <h3 className='uppercase font-mono text-xs text-neutral-700'>today in cassis</h3>
