@@ -44,7 +44,7 @@ Each folder is a standalone project that can be run independently.
 
 To run any challenge:
 
-cd <challenge-name>
+cd challenge-name
 
 npm install
 
