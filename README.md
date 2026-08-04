@@ -20,7 +20,7 @@ The goal of this repo is to improve and demonstrate skills in:
 Modern homepage built with React, TypeScript, and Tailwind CSS.
 
 <img src="./README%20ASSETS/HBCP-Desktop.png" alt="HBCP-Desktop" width="800">
-<img src="./README%20ASSETS/HBCP-Mobile.png" alt="HBCP-Mobile" width="430">
+<img src="./README%20ASSETS/HBCP-Mobile.png" alt="HBCP-Mobile" width="215">
 
 
 ## Tech Stack
