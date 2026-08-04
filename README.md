@@ -13,6 +13,15 @@ The goal of this repo is to improve and demonstrate skills in:
 - Accessibility best practices
 - Translating UI designs into working applications
 
+## Application Showcase
+
+### Hotel Booking Confirmation App
+
+Modern homepage built with React, TypeScript, and Tailwind CSS.
+
+<img src="./README%20ASSETS/HBCP-Desktop.png" alt="HBCP-Desktop" width="800">
+
+
 ## Tech Stack
 
 Most projects use:
