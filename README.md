@@ -23,20 +23,16 @@ Responsive hotel booking confirmation interface built with React, TypeScript, an
   <tr>
     <td width="75%" align="center" valign="top">
       <strong>Desktop</strong><br><br>
-      <img
-        src="./README%20ASSETS/HBCP-Desktop.png"
-        alt="Hotel Booking Confirmation desktop view"
-        width="100%"
-      >
+      <img src="./README%20ASSETS/HBCP-Desktop.png"
+           alt="Desktop View"
+           width="100%">
     </td>
 
     <td width="25%" align="center" valign="top">
       <strong>Mobile</strong><br><br>
-      <img
-        src="./README%20ASSETS/HBCP-Mobile.png"
-        alt="Hotel Booking Confirmation mobile view"
-        width="190"
-      >
+      <img src="./README%20ASSETS/HBCP-Mobile.png"
+           alt="Mobile View"
+           width="190">
     </td>
   </tr>
 </table>
