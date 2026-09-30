@@ -45,7 +45,7 @@ const Nav = () => {
                     <h2 className="text-white text-2xl font-medium">Expense Splitter</h2>
                 </section>
                 <section className="mt-8">
-                    <p className="uppercase text-white/80 font-medium">groups</p>
+                    <p className="uppercase text-white/60 font-medium">groups</p>
                     <ul className="mt-4">
                         {groups.map((group) => {
                             const isSelected = selectedGroupId === group.id;
