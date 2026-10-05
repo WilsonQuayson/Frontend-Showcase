@@ -36,7 +36,7 @@ const Nav = () => {
     const [selectedGroupId, setSelectedGroupId] = useState(groups[0]?.id ?? 1);
 
     return(
-        <nav className="bg-[#0c0f16] w-80 border-r-2 border-r-white/30 flex flex-col justify-between">
+        <nav className="sticky top-0 flex h-screen w-80 shrink-0 flex-col justify-between border-r-2 border-r-white/30 bg-[#0c0f16]">
             <div className=" p-4">
                 <section className="flex items-center gap-4">
                     <div className="bg-blue-400 size-12 flex items-center justify-center rounded-xl">
