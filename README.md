@@ -15,14 +15,35 @@ The goal of this repo is to improve and demonstrate skills in:
 
 ## Application Showcase
 
-### Hotel Booking Confirmation App
+<details>
+<summary>
+  <strong>🏨 Hotel Booking Confirmation App UI</strong>
+  <sub> — Click to view</sub>
+</summary>
 
-Responsive hotel booking confirmation interface built with React, TypeScript, and Tailwind CSS.
+<br>
+
 
 <p align="center">
   <img src="./README%20ASSETS/HBCP-Desktop.png" alt="Desktop View" width="650">
   <img src="./README%20ASSETS/HBCP-Mobile.png" alt="Mobile View" width="170">
 </p>
+
+</details>
+
+<details>
+<summary>
+  <strong>💸 Expense Splitter App UI</strong>
+  <sub> — Click to view</sub>
+</summary>
+
+<br>
+
+<p>
+  <img src="./README%20ASSETS/ES-Desktop.png" alt="Desktop View" width="820">
+</p>
+
+</details>
 
 
 ## Tech Stack
